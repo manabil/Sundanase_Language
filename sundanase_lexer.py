@@ -7,7 +7,7 @@ class SundanaseLexer(Lexer):
 
     # A string containing ignored characters (spaces and tabs)
     ignore = ' \t '
-    literals = {'=', '+', '-', '/', '*', '(', ')', ',', ';', '^'}
+    literals = {'=', '+', '-', '/', '*', '(', ')', ',', ';', '^', '%'}
 
     # Tokens
     IF = r'UPAMI'
