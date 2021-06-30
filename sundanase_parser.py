@@ -80,6 +80,10 @@ class SundanaseParser(Parser):
     def expr(self, p):
         return p.expr
 
+    @_('"(" expr ")"')
+    def expr(self, p):
+        return p.expr
+
     @_('NAME')
     def expr(self, p):
         return('var', p.NAME)
