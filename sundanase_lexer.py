@@ -1,11 +1,13 @@
 from sly import Lexer
 
+
 class SundanaseLexer(Lexer):
-    tokens = { NAME, NUMBER, STRING, IF, THEN, ELSE, FOR, TO, ARROW, EQEQ, FUN, PRINT, ERROR }
+    tokens = {NAME, NUMBER, STRING, IF, THEN, ELSE,
+              FOR, TO, ARROW, EQEQ, FUN, PRINT, ERROR}
 
     # A string containing ignored characters (spaces and tabs)
     ignore = ' \t '
-    literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';'}
+    literals = {'=', '+', '-', '/', '*', '(', ')', ',', ';', '^'}
 
     # Tokens
     IF = r'UPAMI'
@@ -16,33 +18,33 @@ class SundanaseLexer(Lexer):
     FUN = r'FUN'
     ARROW = r'->'
     EQEQ = r'=='
-    PRINT= r'PRINT'
-    ERROR =r'LEPAT'
+    PRINT = r'PRINT'
+    ERROR = r'LEPAT'
 
     NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
     STRING = r'\".*?\"'
 
-
-    #Define Number Tokens
+    # Define Number Tokens
     @_(r'\d+')
     def NUMBER(self, t):
         t.value = int(t.value)
         return t
 
-    #Define Comment Token
+    # Define Comment Token
     @_(r'#.*')
     def COMMENT(self, t):
         pass
 
     # Define a rule so we can track line numbers
     @_(r'\n+')
-    def newline(self,t ):
+    def newline(self, t):
         self.lineno = t.value.count('\n')
 
-    #Define Error
+    # Define Error
     def error(self, t):
         print("Illegal character '%s'" % t.value[0])
         self.index += 1
+
 
 if __name__ == '__main__':
     lexer = SundanaseLexer()
