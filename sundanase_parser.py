@@ -8,7 +8,8 @@ class SundanaseParser(Parser):
 
     precedence = (
         ('left', '+', '-'),
-        ('left', '*', '/', '^', '%'),
+        ('left', '*', '/', '%'),
+        ('left', '^'),
         ('right', 'UMINUS'),
     )
 
