@@ -16,6 +16,10 @@ class SundanaseParser(Parser):
     def __init__(self):
         self.env = {}
 
+    @_('')
+    def statement(self, p):
+        pass
+
     @_('FOR var_assign TO expr THEN statement')
     def statement(self, p):
         return ('for_loop', ('for_loop_setup', p.var_assign, p.expr), p.statement)

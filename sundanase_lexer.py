@@ -2,12 +2,11 @@ from sly import Lexer
 
 
 class SundanaseLexer(Lexer):
-    tokens = {NAME, NUMBER, STRING, IF, THEN, ELSE,
-              FOR, TO, ARROW, EQEQ, FUN, PRINT, ERROR}
-
-    # A string containing ignored characters (spaces and tabs)
+    tokens = {NAME, NUMBER, STRING, SAMI, IF, THEN, ELSE,
+              FOR, TO, ARROW, EQEQ, NTEQ, GT, GTEQ, LT, LTEQ, FUN, PRINT, ERROR}
     ignore = ' \t '
-    literals = {'=', '+', '-', '/', '*', '(', ')', ',', ';', '^', '%'}
+    literals = {'=', '+', '-', '/', '*',
+                '(', ')', ',', ';', '^', '%', '!', '<', '>'}
 
     # Tokens
     IF = r'UPAMI'
@@ -18,9 +17,11 @@ class SundanaseLexer(Lexer):
     FUN = r'FUN'
     ARROW = r'->'
     EQEQ = r'=='
+    NTEQ = r'!='
+    GTEQ = r'>='
+    LTEQ = r'<='
     PRINT = r'PRINT'
     ERROR = r'LEPAT'
-
     NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
     STRING = r'\".*?\"'
 
