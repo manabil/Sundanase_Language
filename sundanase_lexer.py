@@ -26,9 +26,9 @@ class SundanaseLexer(Lexer):
     STRING = r'\".*?\"'
 
     # Define Number Tokens
-    @_(r'\d+')
+    @_(r'\d+[.]*\d*')
     def NUMBER(self, t):
-        t.value = int(t.value)
+        t.value = float(t.value)
         return t
 
     # Define Comment Token
