@@ -24,9 +24,9 @@ class SundanaseParser(Parser):
     def statement(self, p):
         return ('for_loop', ('for_loop_setup', p.var_assign, p.expr), p.statement)
 
-    @_('IF condition THEN statement ELSE statement')
+    @_('IF statement THEN statement ELSE statement')
     def statement(self, p):
-        return('if_stmt', p.condition, ('branch', p.statement0, p.statement1))
+        return('if_stmt', p.statement0, ('branch', p.statement1, p.statement2))
 
     @_('FUN NAME "(" ")" ARROW statement')
     def statement(self, p):
@@ -37,27 +37,27 @@ class SundanaseParser(Parser):
         return('fun_call', p.NAME)
 
     @_('expr EQEQ expr')
-    def condition(self, p):
+    def statement(self, p):
         return ('eqeq', p.expr0, p.expr1)
 
     @_('expr NTEQ expr')
-    def condition(self, p):
+    def statement(self, p):
         return ('nteq', p.expr0, p.expr1)
 
     @_('expr ">" expr')
-    def condition(self, p):
+    def statement(self, p):
         return ('gt', p.expr0, p.expr1)
 
     @_('expr GTEQ expr')
-    def condition(self, p):
+    def statement(self, p):
         return ('gteq', p.expr0, p.expr1)
 
     @_('expr "<" expr')
-    def condition(self, p):
+    def statement(self, p):
         return ('lt', p.expr0, p.expr1)
 
     @_('expr LTEQ expr')
-    def condition(self, p):
+    def statement(self, p):
         return ('lteq', p.expr0, p.expr1)
 
     @_('var_assign')

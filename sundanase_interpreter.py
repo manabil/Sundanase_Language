@@ -50,7 +50,7 @@ class BasicExecute:
         if node[0] == 'eqeq':
             return self.walkTree(node[1]) == self.walkTree(node[2])
 
-        if node[0] == 'ntqe':
+        if node[0] == 'nteq':
             return self.walkTree(node[1]) != self.walkTree(node[2])
 
         if node[0] == 'gt':
