@@ -2,11 +2,11 @@ from sly import Lexer
 
 
 class SundanaseLexer(Lexer):
-    tokens = {NAME, NUMBER, STRING, SAMI, IF, THEN, ELSE,
-              FOR, TO, ARROW, EQEQ, NTEQ, GT, GTEQ, LT, LTEQ, FUN, PRINT, ERROR}
+    tokens = {NAME, NUMBER, STRING, IF, THEN, ELSE,
+              FOR, TO, ARROW, EQEQ, NTEQ, GTEQ, LTEQ, FUN, PRINT, ERROR}
     ignore = ' \t '
     literals = {'=', '+', '-', '/', '*',
-                '(', ')', ',', ';', '^', '%', '!', '<', '>'}
+                '(', ')', ',', ';', '^', '%', '<', ">"}
 
     # Tokens
     IF = r'UPAMI'

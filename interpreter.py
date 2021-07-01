@@ -47,8 +47,23 @@ class BasicExecute:
                 return self.walkTree(node[2][1])
             return self.walkTree(node[2][2])
 
-        if node[0] == 'condition_eqeq':
+        if node[0] == 'eqeq':
             return self.walkTree(node[1]) == self.walkTree(node[2])
+
+        if node[0] == 'ntqe':
+            return self.walkTree(node[1]) != self.walkTree(node[2])
+
+        if node[0] == 'gt':
+            return self.walkTree(node[1]) > self.walkTree(node[2])
+
+        if node[0] == 'gteq':
+            return self.walkTree(node[1]) >= self.walkTree(node[2])
+
+        if node[0] == 'lt':
+            return self.walkTree(node[1]) < self.walkTree(node[2])
+
+        if node[0] == 'lteq':
+            return self.walkTree(node[1]) <= self.walkTree(node[2])
 
         if node[0] == 'fun_def':
             self.env[node[1]] = node[2]

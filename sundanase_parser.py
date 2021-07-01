@@ -38,7 +38,27 @@ class SundanaseParser(Parser):
 
     @_('expr EQEQ expr')
     def condition(self, p):
-        return ('condition_eqeq', p.expr0, p.expr1)
+        return ('eqeq', p.expr0, p.expr1)
+
+    @_('expr NTEQ expr')
+    def condition(self, p):
+        return ('nteq', p.expr0, p.expr1)
+
+    @_('expr ">" expr')
+    def condition(self, p):
+        return ('gt', p.expr0, p.expr1)
+
+    @_('expr GTEQ expr')
+    def condition(self, p):
+        return ('gteq', p.expr0, p.expr1)
+
+    @_('expr "<" expr')
+    def condition(self, p):
+        return ('lt', p.expr0, p.expr1)
+
+    @_('expr LTEQ expr')
+    def condition(self, p):
+        return ('lteq', p.expr0, p.expr1)
 
     @_('var_assign')
     def statement(self, p):
@@ -100,7 +120,7 @@ class SundanaseParser(Parser):
     def statement(self, p):
         return('print', p.STRING)
 
-    @_(' PRINT expr')
+    @_('PRINT expr')
     def statement(self, p):
         return('print', p.expr)
 
