@@ -2,11 +2,13 @@ import sundanase_lexer
 import sundanase_parser
 
 
-class BasicExecute:
+class Sundanase_interpreter:
 
     def __init__(self, tree, env):
         self.env = env
         result = self.walkTree(tree)
+        if result is not None and isinstance(result, int):
+            print(result)
         if result is not None and isinstance(result, float):
             print(result)
         if isinstance(result, str) and result[0] == '"':
@@ -14,9 +16,11 @@ class BasicExecute:
 
     def walkTree(self, node):
 
-        if isinstance(node, float):
+        if isinstance(node, int):
             return node
         if isinstance(node, str):
+            return node
+        if isinstance(node, float):
             return node
 
         if node is None:
@@ -30,6 +34,9 @@ class BasicExecute:
                 self.walkTree(node[2])
 
         if node[0] == 'num':
+            return node[1]
+
+        if node[0] == 'float':
             return node[1]
 
         if node[0] == 'str':
@@ -128,4 +135,4 @@ if __name__ == '__main__':
             break
         if text:
             tree = parser.parse(lexer.tokenize(text))
-            BasicExecute(tree, env)
+            Sundanase_interpreter(tree, env)

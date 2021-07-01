@@ -2,7 +2,7 @@ from sly import Lexer
 
 
 class SundanaseLexer(Lexer):
-    tokens = {NAME, NUMBER, STRING, IF, THEN, ELSE,
+    tokens = {NAME, NUMBER, FLOAT, STRING, IF, THEN, ELSE,
               FOR, TO, ARROW, EQEQ, NTEQ, GTEQ, LTEQ, FUN, PRINT, ERROR}
     ignore = ' \t '
     literals = {'=', '+', '-', '/', '*',
@@ -26,9 +26,14 @@ class SundanaseLexer(Lexer):
     STRING = r'\".*?\"'
 
     # Define Number Tokens
-    @_(r'\d+[.]*\d*')
-    def NUMBER(self, t):
+    @_(r'\d+[.]+\d*')
+    def FLOAT(self, t):
         t.value = float(t.value)
+        return t
+
+    @_(r'\d+')
+    def NUMBER(self, t):
+        t.value = int(t.value)
         return t
 
     # Define Comment Token

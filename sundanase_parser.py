@@ -116,6 +116,10 @@ class SundanaseParser(Parser):
     def expr(self, p):
         return('num', p.NUMBER)
 
+    @_('FLOAT')
+    def expr(self, p):
+        return('float', p.FLOAT)
+
     @_('PRINT STRING')
     def statement(self, p):
         return('print', p.STRING)
