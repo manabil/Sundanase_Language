@@ -52,18 +52,18 @@ py -m pip lis
 
    i.e : Copy paste this text to your cmd or terminal
 
-```py
-py execute.py helloworld.sundanase
-```
+   ```py
+   py execute.py helloworld.sundanase
+   ```
 
 3. Or run file `main.py` then type your command
 
    i.e : Type your command in cmd or terminal
 
-```py
-py main2.py
-PRINT "HELLO WORLD"
-```
+   ```py
+   py main2.py
+   PRINT "HELLO WORLD"
+   ```
 
 ## Examples Sundanase Lang
 
@@ -75,6 +75,8 @@ PRINT "HELLO WORLD"
 PRINT "Hello World"
 Sundanase > Hello World
 ```
+
+**or :**
 
 ```python
 a = "Hello World"
@@ -106,6 +108,8 @@ Sundanase > 1
 PRINT f
 Sundanase > 25
 ```
+
+**or :**
 
 ```python
 a = 6
@@ -144,6 +148,7 @@ Sundanase > false
 ### IF ELSE
 
 > IF _expr_ THEN _stmt1_ ELSE _stmt2_
+
 > UPAMI _expr_ TERAS _stmt1_ HENTEU _stmt2_
 
 **example :**
@@ -184,6 +189,8 @@ FUN print() -> PRINT "Hello World"
 print()
 Sundanase > Hello World
 ```
+
+**or :**
 
 ```py
 FUN loop() -> KAHATUR i=0 KANGGO 5 TERAS PRINT i
