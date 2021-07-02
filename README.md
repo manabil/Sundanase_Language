@@ -1,4 +1,4 @@
-# Rhs-Lang
+# Sundanase-Lang
 
 Repository of Compilation Techniques (Learning) with [Library SLY](https://sly.readthedocs.io/en/latest/sly.html).
 You can read the [manual book here](https://github.com/pureism/Sundanase_Language).
@@ -15,14 +15,14 @@ You can read the [manual book here](https://github.com/pureism/Sundanase_Languag
 
 ## You Must Know
 
-- [x] This language is created using the SLY library which is supported with [PYTHON version 3.\*](https://www.python.org/ "Python")
-- [x] This language has the extension .sundanase
-- [x] This language based from Sunda Language, Indonesia
+- This language is created using the SLY library which is supported with [Python v3.\*](https://www.python.org/ "Python")
+- This language has the extension .sundanase
+- This language based from Sunda Language, Indonesia
 
 ## Prerequisite
 
-- [x] Python Language Installed [PYTHON version 3.\*](https://www.python.org/ "Python")
-- [x] Sly Package Installed [Sly Package version 0.\*](https://pypi.org/project/sly/ "Sly Package")
+- [x] Python Language Installed [Python v3.\*](https://www.python.org/ "Python")
+- [x] Sly Package Installed [Sly Package v0.\*](https://pypi.org/project/sly/ "Sly Package")
 
 **Check your package**
 
@@ -50,19 +50,19 @@ py -m pip lis
 1. Open CMD or TERMINAL with the directory this folder directory `cd .../Sundanase/`
 2. And then run file `execute.py` in the `Sundanase/` folder
 
-i.e : Copy paste this text to your cmd or terminal
+   i.e : Copy paste this text to your cmd or terminal
 
-```
-py .execute.py .bahasaku.rhs
+```py
+py execute.py helloworld.sundanase
 ```
 
 3. Or run file `main.py` then type your command
 
-i.e : Type your command in cmd or terminal
+   i.e : Type your command in cmd or terminal
 
-```
+```py
 py main2.py
-Sundanase > PRINT "HELLO WORLD"
+PRINT "HELLO WORLD"
 ```
 
 ## Examples Sundanase Lang
@@ -72,15 +72,13 @@ Sundanase > PRINT "HELLO WORLD"
 **example :**
 
 ```python
-Sundanase > PRINT "Hello World"
+PRINT "Hello World"
 Sundanase > Hello World
 ```
 
-**or :**
-
 ```python
-Sundanase > a = "Hello World"
-Sundanase > PRINT a
+a = "Hello World"
+PRINT a
 Sundanase > Hello World
 ```
 
@@ -89,59 +87,57 @@ Sundanase > Hello World
 **example :**
 
 ```python
-Sundanase > a = 3 + 2
-Sundanase > b = 4 - 1
-Sundanase > c = 3 * 3
-Sundanase > d = 4 / 2
-Sundanase > e = 5 % 2
-Sundanase > f = 5 ^ 2
-Sundanase > PRINT a
+a = 3 + 2
+b = 4 - 1
+c = 3 * 3
+d = 4 / 2
+e = 5 % 2
+f = 5 ^ 2
+PRINT a
 Sundanase > 5
-Sundanase > PRINT b
+PRINT b
 Sundanase > 3
-Sundanase > PRINT c
+PRINT c
 Sundanase > 6
-Sundanase > PRINT d
+PRINT d
 Sundanase > 2
-Sundanase > PRINT e
+PRINT e
 Sundanase > 1
-Sundanase > PRINT f
+PRINT f
 Sundanase > 25
 ```
 
-**or :**
-
 ```python
-Sundanase > a = 6
-Sundanase > b = 2
-Sundanase > PRINT (a + b) * b
+a = 6
+b = 2
+PRINT (a + b) * b
 Sundanase > 16
-Sundanase > PRINT a - b * b
+PRINT a - b * b
 Sundanase > 2
-Sundanase > PRINT a * b ^ b
+PRINT a * b ^ b
 Sundanase > 24
-Sundanase > PRINT a % (a / b)
+PRINT a % (a / b)
 Sundanase > 0
 ```
 
 ### Logical Operations
 
-> Logical Operation = `==`, `!=`, `>`, `<`, `>=`, `<=`
+> Logical Operation = `==` `!=` `>` `<` `>=` `<=`
 
 **example :**
 
 ```py
-Sundanase > 5 == 5
+5 == 5
 Sundanase > true
-Sundanase > 5 != 5
+5 != 5
 Sundanase > false
-Sundanase > 7 > 5
+7 > 5
 Sundanase > true
-Sundanase > 7 < 5
+7 < 5
 Sundanase > false
-Sundanase > 5 <= 10
+5 <= 10
 Sundanase > true
-Sundanase > 5 >= 10
+5 >= 10
 Sundanase > false
 ```
 
@@ -153,27 +149,28 @@ Sundanase > false
 **example :**
 
 ```py
-Sundanase > a = 6
-Sundanase > y = "true"
-Sundanase > n = "false"
-Sundanase > UPAMI a==6 TERAS PRINT y HENTEU PRINT n
+a = 6
+y = "true"
+n = "false"
+UPAMI a==6 TERAS PRINT y HENTEU PRINT n
 Sundanase > "true"
 ```
 
 ### FOR
 
 > FOR _expr_ TO _stmt1_ THEN _stmt2_
+
 > KAHATUR _expr_ KANGGO _stmt1_ TERAS _stmt2_
 
 **example :**
 
 ```python
-Sundanase > KAHATUR i=0 KANGGO 5 TERAS PRINT i
-0
-1
-2
-3
-4
+KAHATUR i=0 KANGGO 5 TERAS PRINT i
+Sundanase > 0
+            1
+            2
+            3
+            4
 ```
 
 ### Function
@@ -183,21 +180,19 @@ Sundanase > KAHATUR i=0 KANGGO 5 TERAS PRINT i
 **example :**
 
 ```py
-Sundanase > FUN print() -> PRINT "Hello World"
-Sundanase > print()
-Sundanase > Mantap Gan!!
+FUN print() -> PRINT "Hello World"
+print()
+Sundanase > Hello World
 ```
 
-**or :**
-
 ```py
-Sundanase > FUN loop() -> KAHATUR i=0 KANGGO 5 TERAS PRINT i
-Sundanase > loop()
-0
-1
-2
-3
-4
+FUN loop() -> KAHATUR i=0 KANGGO 5 TERAS PRINT i
+loop()
+Sundanase > 0
+            1
+            2
+            3
+            4
 ```
 
 ### Use Comment
@@ -207,9 +202,9 @@ Sundanase > loop()
 **example:**
 
 ```py
-Sundanase > I = "U" #U is a string
-Sundanase > #now you know how this works
-Sundanase > UPAMI I == "U" TERAS PRINT "PERFECT" HENTEU PRINT "I'm So Sorry"
+I = "U" #U is a string
+#now you know how this works
+UPAMI I == "U" TERAS PRINT "PERFECT" HENTEU PRINT "I'm So Sorry"
 Sundanase > "PERFECT"
 ```
 
