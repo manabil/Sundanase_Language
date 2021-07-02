@@ -5,8 +5,8 @@ You can read the [manual book here](https://github.com/pureism/Sundanase_Languag
 
 ## Our Grup:
 
-- Muhammad Ammar Nabil "@Pureism"
-- Rafli Hilan Yufandani "@RafliHillany"
+- Muhammad Ammar Nabil [@Pureism](https://github.com/pureism)
+- Rafli Hilan Yufandani [@RafliHillany](https://github.com/RafliHillany/)
 - Wisnu Afifudin
 
 ---
