@@ -1,7 +1,7 @@
 # Sundanase-Lang
 
 Repository of Compilation Techniques (Learning) with [Library SLY](https://sly.readthedocs.io/en/latest/sly.html).
-You can read the [manual book here](https://github.com/pureism/Sundanase_Language).
+You can read the [manual book here](https://github.com/Pureism/Sundanase_Language/blob/master/LAPORAN%20TEKNIK%20KOMPILASI%20v0.9.pdf).
 
 ## Our Grup:
 
