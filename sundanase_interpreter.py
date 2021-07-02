@@ -2,7 +2,7 @@ import sundanase_lexer
 import sundanase_parser
 
 
-class Sundanase_interpreter:
+class SundanaseInterpreter:
 
     def __init__(self, tree, env):
         self.env = env
