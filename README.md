@@ -5,9 +5,9 @@ You can read the [manual book here](https://github.com/pureism/Sundanase_Languag
 
 ## Our Grup:
 
-- Muhammad Ammar Nabil @Pureism
-- Rafli Hilan Yufandani @RafliHillany
-- Wisnu Afifudin _-_
+- Muhammad Ammar Nabil "@Pureism"
+- Rafli Hilan Yufandani "@RafliHillany"
+- Wisnu Afifudin
 
 ---
 
@@ -67,7 +67,7 @@ py -m pip lis
 
 ## Examples Sundanase Lang
 
-### PRINT Hello World!!
+### PRINT
 
 **example :**
 
@@ -84,7 +84,9 @@ PRINT a
 Sundanase > Hello World
 ```
 
-### Addition, Subtraction, Multiplication, Division, Modulus, Power
+### Arithmetic Operations
+
+> Arithmetic Operation = `+` `-` `*` `/` `%` `^`
 
 **example :**
 
