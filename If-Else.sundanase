@@ -1,0 +1,4 @@
+a = 6
+y = "true"
+n = "false"
+UPAMI a==6 TERAS PRINT y HENTEU PRINT n

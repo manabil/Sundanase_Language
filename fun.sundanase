@@ -1,0 +1,3 @@
+FUN print() -> PRINT "Hello World !!"
+
+print()

@@ -1,0 +1,19 @@
+a = 2
+b = 1
+y = "True"
+n = "False"
+UPAMI a + b==3 TERAS PRINT y HENTEU PRINT n
+
+KAHATUR c = 0 KANGGO 5 TERAS b + c
+
+h = "Hello Word"
+PRINT ""
+PRINT h
+PRINT ""
+
+KAHATUR i = 0 KANGGO 5 TERAS PRINT i
+
+PRINT ""
+PRINT a / b 
+
+#EDIT YOUR CODE HERE

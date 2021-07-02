@@ -1,0 +1,17 @@
+3 + 2
+4 - 1
+3 * 3
+4 / 2
+5 % 2
+5 ^ 2
+
+PRINT ""
+PRINT "OR"
+PRINT ""
+
+a = 6
+b = 2
+PRINT (a + b) * b
+PRINT a - b * b
+PRINT a * b ^ b
+PRINT a % (a / b)
